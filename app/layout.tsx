@@ -13,9 +13,41 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "ArchViz Studio | Architectural Visualization",
+  metadataBase: new URL('https://your-domain.com'), // Change to your domain
+  title: "Renderra | Architectural Visualization",
   description: "Professional architectural visualization services for modern projects",
-    generator: 'v0.dev'
+  generator: 'me',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/safari-pinned-tab.svg',
+        color: '#000000',
+      },
+    ],
+  },
+  openGraph: {
+    images: [
+      {
+        url: '/favicon-512x512.png',
+        width: 512,
+        height: 512,
+        alt: 'Your App Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/favicon-512x512.png'],
+  },
 }
 
 export default function RootLayout({
